@@ -1,0 +1,19 @@
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>First Name</th><th>Last Name</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <th><a href="/account/?user_id=<%= rs[i].user_id %>"> <%= rs[i].fname %></a></th>
+            <th><a href="/account/?user_id=<%= rs[i].user_id %>"> <%= rs[i].lname %></a></th>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No movies exist.
+    <% } %>
+</div>
+
+<div style="margin-top:10px;">
+    <a href="/account/create">Create New User</a>
+</div>
