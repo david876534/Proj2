@@ -8,7 +8,7 @@ router.get('/new', function(req, res) {
 });
 
 router.get('/genre_insert', function(req, res){
-    genreDal.Insert(req.query.genre_name, function(err, result){
+    genreDal.Insert(req.query.genre_name, 12, function(err, result){
         var response = {};
         if(err) {
             response.message = err.message;

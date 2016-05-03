@@ -3,7 +3,7 @@ var addNewGenre = function() {
 
 
     var payload = {
-        genre_name: $('#genre_name').val()
+        genre_name: $('genre_name').val()
     };
 
  
@@ -13,15 +13,15 @@ var addNewGenre = function() {
         contentType: "json",  
         data: payload,  
         complete: function(data) {  
-            $('#message').html(data.responseJSON.message);
+            $('message').html(data.responseJSON.message);
             
-            $('#message').show();
+            $('message').show();
         }
     })
 }
 
 $(document).ready(function() {
-    $('#addBtn').click(function(e) {
+    $('addBtn').click(function(e) {
         console.log('addBtn clicked');
 
         e.preventDefault();

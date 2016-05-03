@@ -37,15 +37,15 @@ router.get('/create', function(req, res) {
             res.send("Error: " + err);
         }
         else {
-            res.render('movie_insert_form.ejs', {genres: result}, {title: 'Movie Insert'});
+            res.render('movie_insert_form.ejs', {genres: result, title: 'Movie Insert'});
         }
     });
 });
 
 router.post('/save', function(req, res, next) {
-    console.log("movie_title equals: " + req.query.movie_title);
-    console.log("the tagline submitted was: " + req.query.tagline);
-    movieDal.Insert(req.query, function(err, result){
+    console.log("movie_title equals: " + req.body.movie_title);
+    console.log("the tagline submitted was: " + req.body.tagline);
+    movieDal.Insert(req.body.movie_title, req.body.tagline, req.body.genres, function(err, result){
         if (err) {
             res.send(err);
         }
