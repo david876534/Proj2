@@ -3,9 +3,9 @@
 <head>
     <title><%= title %></title>
     <% if (typeof js_includes !== 'undefined') { %>
-    <% for(var i=0; i < js_includes.length; i++) { %>
-    <script src="<%= js_includes[i] %>"></script>
-    <% }%>
+        <% for(var i=0; i < js_includes.length; i++) { %>
+            <script src="<%= js_includes[i] %>"></script>
+        <% }%>
     <% }%>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <style>
