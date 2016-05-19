@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% if (typeof js_includes !== 'undefined') { %>
+    <% for(var i=0; i < js_includes.length; i++) { %>
+    <script src="<%= js_includes[i] %>"></script>
+    <% }%>
+    <% }%>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+        #header {
+            background-color:teal;
+            text-align:left;
+            font-size: 48px;
+            padding: 1px;
+        }
+        #nav{
+            background-color:silver;
+            height:400px;
+            width:200px;
+            float:left;
+            padding:5px;
+        }
+        #section {
+        table, th, td {
+            border:1px solid black;
+            width:300px;
+        }
+        th, td {
+            padding:5px;
+        }
+        }
+        #footer {
+            background-color:darkgrey;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:2px;
+        }
+    </style>
+</head>
+<body>
+<div style="float:right;">
+    <% if(typeof custName !== "undefined") { %>
+    Welcome, <%= custName %>
+    <% } else { %>
+    <a href="/login">Login</a>
+    <% } %>
+</div>
+<div id="header">
+    <h1><%= title %></h1>
+</div>
+<div id="nav">
+    <a href="/aboutuslink">About Us</a><br />
+    <a href="/processor/all">See All Processors</a><br />
+    <a href="/mobo/all">See Al Motherboards</a><br />
+    <a href="/mobo/create">Create New Motherboards</a>
+</div>

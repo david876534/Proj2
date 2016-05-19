@@ -1,0 +1,14 @@
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Motherboard Names</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/mobo/?model_name=<%= rs[i].model_name %>"> <%= rs[i].model_name %></a></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No movies exist.
+    <% } %>
+</div>

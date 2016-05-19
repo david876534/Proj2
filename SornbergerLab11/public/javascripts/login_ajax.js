@@ -2,7 +2,7 @@ var login = function() {
 
 
     var payload = {
-        email: $('#email').val(),
+        custName: $('#custName').val(),
         password: $('#password').val()
     };
 

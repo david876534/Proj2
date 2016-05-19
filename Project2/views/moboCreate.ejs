@@ -1,0 +1,13 @@
+<% js_includes = []%>
+<% include partials/header %>
+
+<form method="POST" action="/mobo/save">
+    <%  %>
+    <%  %>
+    <label for="model_name">Model Name</label> <input type="text" id="model_name" name="model_name" /><br />
+    <label for="socket_type">Socket Type</label> <input type="text" id="socket_type" name="socket_type" /><br />
+    <label for="price">Price</label> <input type="text" id="price" name="price" /><br />
+    <button id="goBtn">Add</button>
+</form>
+
+<% include partials/footer %>
